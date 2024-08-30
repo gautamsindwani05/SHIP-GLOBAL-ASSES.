@@ -1,0 +1,70 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the accordion */
+.accordion {
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Accordion Item */
+.accordion-item {
+    border-top: 1px solid #ddd;
+}
+
+/* Accordion Header */
+.accordion-header {
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    color: #fff;
+}
+
+/* Accordion Content */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 15px;
+    background-color: #fff;
+}
+
+.accordion-content p {
+    padding: 15px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Opened state for accordion content */
+.accordion-item.active .accordion-content {
+    padding: 15px;
+    max-height: 500px; /* or a specific height based on content */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .accordion-header {
+        font-size: 16px;
+    }
+}
+
+/* Adding subtle shadows to the content */
+.accordion-content {
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
